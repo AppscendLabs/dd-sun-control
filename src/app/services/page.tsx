@@ -1,0 +1,365 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from "motion/react";
+import {
+  CheckCircle,
+  Shield,
+  Zap,
+  Sun,
+  Eye,
+  Thermometer,
+  Lock,
+} from "lucide-react";
+
+const FEATURES = [
+  {
+    icon: Shield,
+    title: "UV Protection",
+    description:
+      "Block harmful UV rays that cause skin damage and interior fading",
+  },
+  {
+    icon: Thermometer,
+    title: "Heat Reduction",
+    description:
+      "Significantly reduce interior temperatures and improve comfort",
+  },
+  {
+    icon: Eye,
+    title: "Privacy Enhancement",
+    description:
+      "Increase privacy while maintaining visibility from inside",
+  },
+  {
+    icon: Zap,
+    title: "Energy Savings",
+    description:
+      "Lower cooling costs with improved thermal efficiency",
+  },
+  {
+    icon: Lock,
+    title: "Safety & Security",
+    description:
+      "Hold shattered glass together in case of accidents or break-ins",
+  },
+  {
+    icon: Sun,
+    title: "Glare Reduction",
+    description:
+      "Reduce eye strain and improve visibility in bright conditions",
+  },
+];
+
+const SERVICES = [
+  {
+    title: "Automotive Window Tinting",
+    description:
+      "Professional window tinting for all vehicle types including cars, trucks, SUVs, and luxury vehicles.",
+    image:
+      "https://images.unsplash.com/photo-1612126413358-8ae4b09e0324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjB3aW5kb3clMjB0aW50aW5nJTIwZGFya3xlbnwxfHx8fDE3NzA5NjAyNjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    benefits: [
+      "Blocks 99% of harmful UV rays",
+      "Reduces interior heat by up to 60%",
+      "Protects upholstery from fading",
+      "Enhanced privacy and security",
+      "Reduces glare for safer driving",
+      "Sleek, professional appearance",
+    ],
+    tintOptions: ["5%", "15%", "20%", "30%", "35%", "50%"],
+  },
+  {
+    title: "Residential Window Tinting",
+    description:
+      "Transform your home with energy-efficient window films that provide comfort, privacy, and protection.",
+    image:
+      "https://images.unsplash.com/photo-1538056760650-96bfa0545061?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXNpZGVudGlhbCUyMHdpbmRvdyUyMHRpbnRpbmclMjBidWlsZGluZ3xlbnwxfHx8fDE3NzA5NjAyNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    benefits: [
+      "Reduce energy costs by up to 30%",
+      "Protect furniture and flooring from UV damage",
+      "Enhance privacy without losing natural light",
+      "Minimize hot spots and glare",
+      "Improve home security",
+      "Variety of decorative options available",
+    ],
+    tintOptions: ["Light", "Medium", "Dark", "Reflective", "Decorative"],
+  },
+  {
+    title: "Commercial Window Tinting",
+    description:
+      "Professional solutions for offices, retail spaces, and commercial buildings to enhance comfort and reduce costs.",
+    image:
+      "https://images.unsplash.com/photo-1660496247667-3fb697c396af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjBidWlsZGluZyUyMGdsYXNzJTIwd2luZG93c3xlbnwxfHx8fDE3NzA5NjAyNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    benefits: [
+      "Significant energy savings for buildings",
+      "Improved employee comfort and productivity",
+      "Professional, uniform appearance",
+      "Custom branding options available",
+      "Meets building code requirements",
+      "Quick installation with minimal disruption",
+    ],
+    tintOptions: ["Standard", "High-Performance", "Safety & Security", "Custom"],
+  },
+  {
+    title: "Paint Protection Film",
+    description:
+      "Protect your vehicle's paint from chips, scratches, and environmental damage with premium PPF.",
+    image:
+      "https://images.unsplash.com/photo-1605437211365-7257403ea287?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBkZXRhaWxpbmclMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzcwOTYwMjY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    benefits: [
+      "Self-healing technology for minor scratches",
+      "Maintains vehicle resale value",
+      "Crystal clear, invisible protection",
+      "Resistant to stains and discoloration",
+      "10-year warranty included",
+      "Protects against rock chips and road debris",
+    ],
+    tintOptions: ["Full Front", "Partial Front", "Full Vehicle", "Custom Areas"],
+  },
+];
+
+const PROCESS_STEPS = [
+  {
+    step: "01",
+    title: "Consultation",
+    description: "Discuss your needs and choose the right tint option",
+  },
+  {
+    step: "02",
+    title: "Measurement",
+    description: "Precise measurements ensure perfect fit and coverage",
+  },
+  {
+    step: "03",
+    title: "Installation",
+    description: "Expert installation using professional techniques",
+  },
+  {
+    step: "04",
+    title: "Quality Check",
+    description: "Thorough inspection to ensure flawless results",
+  },
+];
+
+export default function ServicesPage() {
+  return (
+    <div className="min-h-screen pt-20">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-slate-900 py-20 text-white">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-gradient-to-br from-yellow-500 to-orange-600" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-6 text-4xl font-bold sm:text-5xl md:text-6xl"
+          >
+            Our Services
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="mx-auto max-w-3xl text-xl text-slate-300"
+          >
+            Premium window tinting solutions tailored to your specific needs.
+            Whether it&apos;s your vehicle, home, or business, we&apos;ve got
+            you covered.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* Features Grid */}
+      <section className="bg-slate-50 py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-4 text-3xl font-bold text-slate-900 sm:text-4xl"
+            >
+              Key Benefits
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-xl text-slate-600"
+            >
+              Why window tinting is a smart investment
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {FEATURES.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="rounded-xl bg-white p-6 shadow-md transition-shadow hover:shadow-lg"
+              >
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-yellow-100">
+                  <feature.icon className="h-6 w-6 text-yellow-600" />
+                </div>
+                <h3 className="mb-2 text-xl font-semibold text-slate-900">
+                  {feature.title}
+                </h3>
+                <p className="text-slate-600">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Detail */}
+      <section className="py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="space-y-24">
+            {SERVICES.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2"
+              >
+                <div className={index % 2 === 1 ? "lg:order-2" : ""}>
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      width={1080}
+                      height={384}
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="h-96 w-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
+                  </div>
+                </div>
+
+                <div className={index % 2 === 1 ? "lg:order-1" : ""}>
+                  <h2 className="mb-4 text-3xl font-bold text-slate-900 sm:text-4xl">
+                    {service.title}
+                  </h2>
+                  <p className="mb-6 text-xl text-slate-600">
+                    {service.description}
+                  </p>
+
+                  <div className="mb-6">
+                    <h3 className="mb-4 text-xl font-semibold text-slate-900">
+                      Benefits Include:
+                    </h3>
+                    <ul className="grid grid-cols-1 gap-3">
+                      {service.benefits.map((benefit) => (
+                        <li
+                          key={benefit}
+                          className="flex items-start space-x-3"
+                        >
+                          <CheckCircle className="mt-0.5 h-6 w-6 shrink-0 text-yellow-500" />
+                          <span className="text-slate-700">{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="rounded-xl bg-slate-50 p-6">
+                    <h3 className="mb-3 text-lg font-semibold text-slate-900">
+                      Available Options:
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {service.tintOptions.map((option) => (
+                        <span
+                          key={option}
+                          className="rounded-full bg-yellow-100 px-4 py-2 text-sm font-medium text-yellow-700"
+                        >
+                          {option}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="bg-slate-50 py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-4 text-3xl font-bold text-slate-900 sm:text-4xl"
+            >
+              Our Process
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-xl text-slate-600"
+            >
+              Simple, professional, and hassle-free
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+            {PROCESS_STEPS.map((item, index) => (
+              <motion.div
+                key={item.step}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-yellow-500 text-2xl font-bold text-white">
+                  {item.step}
+                </div>
+                <h3 className="mb-2 text-xl font-semibold text-slate-900">
+                  {item.title}
+                </h3>
+                <p className="text-slate-600">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gradient-to-r from-yellow-500 to-orange-600 py-20 text-white">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="mb-6 text-3xl font-bold sm:text-4xl">
+              Ready to Experience the Benefits?
+            </h2>
+            <p className="mb-8 text-xl text-white/90">
+              Contact us today for a free consultation and quote. Our experts
+              will help you choose the perfect solution.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block rounded-full bg-white px-8 py-4 text-lg font-semibold text-yellow-600 shadow-lg transition-all hover:scale-105 hover:bg-slate-100"
+            >
+              Get Your Free Quote
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}
