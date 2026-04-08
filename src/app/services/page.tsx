@@ -360,7 +360,7 @@ export default function ServicesPage() {
                   We install genuine 3M window films — trusted worldwide for performance, clarity, and durability. Learn more about the films we use directly from 3M.
                 </p>
                 <a
-                  href="https://www.3m.com/3M/en_US/p/c/window-films/"
+                  href="https://www.3m.com/3M/en_US/p/c/films-sheeting/window/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-2 rounded-full bg-red-600 px-6 py-3 font-semibold text-white transition-all hover:scale-105 hover:bg-red-700"
