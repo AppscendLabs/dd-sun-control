@@ -29,7 +29,7 @@ const SERVICES_DATA = [
   {
     name: "Paint Protection Film",
     description:
-      "Premium self-healing paint protection film to guard vehicle paint from chips, scratches, and environmental damage. Includes 10-year warranty.",
+      "Premium self-healing paint protection film to guard vehicle paint from chips, scratches, and environmental damage. Includes 7-year warranty.",
   },
 ];
 

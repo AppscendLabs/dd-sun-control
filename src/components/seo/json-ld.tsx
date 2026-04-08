@@ -7,14 +7,14 @@ export function LocalBusinessJsonLd() {
     description:
       "Professional window tinting services for automotive, residential, and commercial applications. UV protection, heat reduction, and privacy enhancement.",
     url: "https://danddsuncontrol.com",
-    telephone: "+1234567890",
+    telephone: "+15019457474",
     email: "info@danddsuncontrol.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "123 Main Street",
-      addressLocality: "City",
-      addressRegion: "ST",
-      postalCode: "12345",
+      streetAddress: "4221 North Richards Road",
+      addressLocality: "North Little Rock",
+      addressRegion: "AR",
+      postalCode: "72117",
       addressCountry: "US",
     },
     openingHoursSpecification: [

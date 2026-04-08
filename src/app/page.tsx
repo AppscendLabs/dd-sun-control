@@ -9,8 +9,8 @@ import {
   Award,
   Clock,
   CheckCircle,
-  Star,
 } from "lucide-react";
+import { GoogleReviews } from "@/components/google-reviews";
 
 const BENEFITS = [
   {
@@ -108,23 +108,6 @@ const ENERGY_BENEFITS = [
   },
 ];
 
-const REVIEWS = [
-  {
-    name: "Michael Rodriguez",
-    rating: 5,
-    text: "Excellent service! The team was professional and the quality of work exceeded my expectations. My car looks amazing!",
-  },
-  {
-    name: "Sarah Johnson",
-    rating: 5,
-    text: "Had my home windows tinted and the difference is incredible. Much cooler inside and my energy bills have dropped.",
-  },
-  {
-    name: "David Chen",
-    rating: 5,
-    text: "Best tinting service in the area. Fast, affordable, and the results are perfect. Highly recommend!",
-  },
-];
 
 const TEAM_MEMBERS = [
   {
@@ -132,7 +115,7 @@ const TEAM_MEMBERS = [
     role: "Owner & Lead Technician",
     image:
       "https://images.unsplash.com/photo-1629507208649-70919ca33793?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBwb3J0cmFpdCUyMGJ1c2luZXNzfGVufDF8fHx8MTc3MDg4MjMxNHww&ixlib=rb-4.1.0&q=80&w=1080",
-    bio: "15+ years experience in professional window tinting",
+    bio: "30+ years experience in professional window tinting",
   },
   {
     name: "Diana Chen",
@@ -428,56 +411,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Reviews Section */}
-      <section className="bg-slate-900 py-20 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-16 text-center">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl"
-            >
-              What Our Customers Say
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-xl text-slate-400"
-            >
-              Don&apos;t just take our word for it
-            </motion.p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {REVIEWS.map((review, index) => (
-              <motion.div
-                key={review.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-2xl bg-slate-800 p-8"
-              >
-                <div className="mb-4 flex">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 fill-current text-yellow-400"
-                    />
-                  ))}
-                </div>
-                <p className="mb-6 italic text-slate-300">
-                  &ldquo;{review.text}&rdquo;
-                </p>
-                <p className="font-semibold">{review.name}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <GoogleReviews />
 
       {/* Team Section */}
       <section className="bg-white py-20">

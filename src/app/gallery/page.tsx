@@ -115,7 +115,7 @@ const STATS = [
   { number: "5000+", label: "Vehicles Tinted" },
   { number: "500+", label: "Homes Protected" },
   { number: "100+", label: "Commercial Projects" },
-  { number: "15+", label: "Years Experience" },
+  { number: "30+", label: "Years Experience" },
 ];
 
 export default function GalleryPage() {

@@ -11,6 +11,7 @@ import {
   Eye,
   Thermometer,
   Lock,
+  ExternalLink,
 } from "lucide-react";
 
 const FEATURES = [
@@ -67,7 +68,7 @@ const SERVICES = [
       "Reduces glare for safer driving",
       "Sleek, professional appearance",
     ],
-    tintOptions: ["5%", "15%", "20%", "30%", "35%", "50%"],
+    tintOptions: ["5%", "15%", "30%", "50%", "80%"],
   },
   {
     title: "Residential Window Tinting",
@@ -112,7 +113,7 @@ const SERVICES = [
       "Maintains vehicle resale value",
       "Crystal clear, invisible protection",
       "Resistant to stains and discoloration",
-      "10-year warranty included",
+      "7-year warranty included",
       "Protects against rock chips and road debris",
     ],
     tintOptions: ["Full Front", "Partial Front", "Full Vehicle", "Custom Areas"],
@@ -333,6 +334,43 @@ export default function ServicesPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 3M Partnership Section */}
+      <section className="py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-2xl border-2 border-slate-100 bg-white p-8 shadow-lg md:p-12"
+          >
+            <div className="flex flex-col items-center gap-8 md:flex-row">
+              <div className="shrink-0 text-center">
+                <div className="inline-flex h-24 w-24 items-center justify-center rounded-2xl bg-red-600 text-4xl font-black text-white">
+                  3M
+                </div>
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h2 className="mb-3 text-2xl font-bold text-slate-900 sm:text-3xl">
+                  Authorized 3M Window Film Dealer
+                </h2>
+                <p className="mb-6 text-lg text-slate-600">
+                  We install genuine 3M window films — trusted worldwide for performance, clarity, and durability. Learn more about the films we use directly from 3M.
+                </p>
+                <a
+                  href="https://www.3m.com/3M/en_US/p/c/window-films/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 rounded-full bg-red-600 px-6 py-3 font-semibold text-white transition-all hover:scale-105 hover:bg-red-700"
+                >
+                  <span>View 3M Window Films</span>
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

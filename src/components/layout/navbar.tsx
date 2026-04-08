@@ -103,7 +103,7 @@ export function Navbar() {
                 </Link>
               ))}
               <a
-                href="tel:+1234567890"
+                href="tel:+15019457474"
                 className="flex items-center space-x-2 rounded-full bg-yellow-500 px-6 py-2.5 text-sm font-semibold text-slate-900 shadow-lg transition-all hover:scale-105 hover:bg-yellow-600"
               >
                 <Phone className="h-4 w-4" />
@@ -167,7 +167,7 @@ export function Navbar() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  href="tel:+1234567890"
+                  href="tel:+15019457474"
                   className="flex items-center space-x-2 rounded-full bg-yellow-500 px-8 py-3 text-lg font-semibold text-slate-900 hover:bg-yellow-600"
                 >
                   <Phone className="h-5 w-5" />

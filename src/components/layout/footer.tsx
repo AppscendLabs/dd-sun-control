@@ -104,16 +104,16 @@ export function Footer() {
                 <li className="flex items-start space-x-3">
                   <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-yellow-500" />
                   <span className="text-sm text-slate-400">
-                    123 Main Street, City, ST 12345
+                    4221 North Richards Rd, North Little Rock, AR 72117
                   </span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 shrink-0 text-yellow-500" />
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+15019457474"
                     className="text-sm text-slate-400 transition-colors hover:text-yellow-500"
                   >
-                    (123) 456-7890
+                    (501) 945-7474
                   </a>
                 </li>
                 <li className="flex items-center space-x-3">

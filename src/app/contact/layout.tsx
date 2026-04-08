@@ -19,17 +19,12 @@ const FAQ_DATA = [
   {
     question: "Do you offer warranties?",
     answer:
-      "Yes! We offer a lifetime warranty on all our installations, covering defects in materials and workmanship.",
+      "Yes! We offer a 7-year warranty on all our installations, covering defects in materials and workmanship.",
   },
   {
     question: "What tint percentages are legal?",
     answer:
       "Tint laws vary by state. We'll help you choose compliant options that meet local regulations while maximizing benefits.",
-  },
-  {
-    question: "Can I wash my car after tinting?",
-    answer:
-      "Wait 3-5 days after installation before washing. This allows the film to fully cure and adhere properly.",
   },
 ];
 
