@@ -18,7 +18,7 @@ export function ClientBanner() {
           </p>
 
           {/* Scrolling track with edge fades */}
-          <div className="relative overflow-hidden">
+          <div className="relative overflow-hidden" style={{ transform: "translateZ(0)" }}>
             <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-slate-800 to-transparent" />
             <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-slate-800 to-transparent" />
 
