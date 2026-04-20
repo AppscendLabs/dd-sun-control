@@ -11,6 +11,7 @@ import {
   Eye,
   Thermometer,
   Lock,
+  ExternalLink,
 } from "lucide-react";
 
 const FEATURES = [
@@ -57,8 +58,7 @@ const SERVICES = [
     title: "Automotive Window Tinting",
     description:
       "Professional window tinting for all vehicle types including cars, trucks, SUVs, and luxury vehicles.",
-    image:
-      "https://images.unsplash.com/photo-1612126413358-8ae4b09e0324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjB3aW5kb3clMjB0aW50aW5nJTIwZGFya3xlbnwxfHx8fDE3NzA5NjAyNjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "/images/work/auto/auto1.jpg",
     benefits: [
       "Blocks 99% of harmful UV rays",
       "Reduces interior heat by up to 60%",
@@ -67,14 +67,13 @@ const SERVICES = [
       "Reduces glare for safer driving",
       "Sleek, professional appearance",
     ],
-    tintOptions: ["5%", "15%", "20%", "30%", "35%", "50%"],
+    tintOptions: ["5%", "15%", "30%", "50%", "80%"],
   },
   {
     title: "Residential Window Tinting",
     description:
       "Transform your home with energy-efficient window films that provide comfort, privacy, and protection.",
-    image:
-      "https://images.unsplash.com/photo-1538056760650-96bfa0545061?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXNpZGVudGlhbCUyMHdpbmRvdyUyMHRpbnRpbmclMjBidWlsZGluZ3xlbnwxfHx8fDE3NzA5NjAyNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "/images/work/residential/residential1.jpg",
     benefits: [
       "Reduce energy costs by up to 30%",
       "Protect furniture and flooring from UV damage",
@@ -89,8 +88,7 @@ const SERVICES = [
     title: "Commercial Window Tinting",
     description:
       "Professional solutions for offices, retail spaces, and commercial buildings to enhance comfort and reduce costs.",
-    image:
-      "https://images.unsplash.com/photo-1660496247667-3fb697c396af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjBidWlsZGluZyUyMGdsYXNzJTIwd2luZG93c3xlbnwxfHx8fDE3NzA5NjAyNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "/images/work/commercial/commercial1.jpg",
     benefits: [
       "Significant energy savings for buildings",
       "Improved employee comfort and productivity",
@@ -105,14 +103,13 @@ const SERVICES = [
     title: "Paint Protection Film",
     description:
       "Protect your vehicle's paint from chips, scratches, and environmental damage with premium PPF.",
-    image:
-      "https://images.unsplash.com/photo-1605437211365-7257403ea287?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBkZXRhaWxpbmclMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzcwOTYwMjY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "/images/work/paint-protection/ppf1.jpg",
     benefits: [
       "Self-healing technology for minor scratches",
       "Maintains vehicle resale value",
       "Crystal clear, invisible protection",
       "Resistant to stains and discoloration",
-      "10-year warranty included",
+      "7-year warranty included",
       "Protects against rock chips and road debris",
     ],
     tintOptions: ["Full Front", "Partial Front", "Full Vehicle", "Custom Areas"],
@@ -333,6 +330,43 @@ export default function ServicesPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 3M Partnership Section */}
+      <section className="py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-2xl border-2 border-slate-100 bg-white p-8 shadow-lg md:p-12"
+          >
+            <div className="flex flex-col items-center gap-8 md:flex-row">
+              <div className="shrink-0 text-center">
+                <div className="inline-flex h-24 w-24 items-center justify-center rounded-2xl bg-red-600 text-4xl font-black text-white">
+                  3M
+                </div>
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h2 className="mb-3 text-2xl font-bold text-slate-900 sm:text-3xl">
+                  Authorized 3M Window Film Dealer
+                </h2>
+                <p className="mb-6 text-lg text-slate-600">
+                  We install genuine 3M window films — trusted worldwide for performance, clarity, and durability. Learn more about the films we use directly from 3M.
+                </p>
+                <a
+                  href="https://www.3m.com/3M/en_US/p/c/films-sheeting/window/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 rounded-full bg-red-600 px-6 py-3 font-semibold text-white transition-all hover:scale-105 hover:bg-red-700"
+                >
+                  <span>View 3M Window Films</span>
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

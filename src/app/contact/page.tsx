@@ -3,30 +3,31 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { BUSINESS } from "@/lib/config";
 
 const CONTACT_INFO = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["(123) 456-7890", "Mon-Sat: 8AM-6PM"],
-    link: "tel:+1234567890",
+    details: [BUSINESS.phone, "Mon-Sat: 8AM-6PM"],
+    link: BUSINESS.phoneHref,
   },
   {
     icon: Mail,
     title: "Email",
-    details: ["info@danddsuncontrol.com", "We reply within 24 hours"],
-    link: "mailto:info@danddsuncontrol.com",
+    details: [BUSINESS.email, "We reply within 24 hours"],
+    link: `mailto:${BUSINESS.email}`,
   },
   {
     icon: MapPin,
     title: "Location",
-    details: ["123 Main Street", "City, ST 12345"],
-    link: "https://maps.google.com",
+    details: [BUSINESS.address.street, `${BUSINESS.address.city}, ${BUSINESS.address.state} ${BUSINESS.address.zip}`],
+    link: BUSINESS.googleMapsDirectionsUrl,
   },
   {
     icon: Clock,
     title: "Hours",
-    details: ["Mon-Fri: 8AM-6PM", "Sat: 9AM-4PM"],
+    details: [BUSINESS.hours.weekdays, BUSINESS.hours.saturday],
     link: null,
   },
 ];
@@ -40,23 +41,18 @@ const FAQ_ITEMS = [
   {
     question: "Do you offer warranties?",
     answer:
-      "Yes! We offer a lifetime warranty on all our installations, covering defects in materials and workmanship.",
+      "Yes! We offer a 7-year warranty on all our installations, covering defects in materials and workmanship.",
   },
   {
     question: "What tint percentages are legal?",
     answer:
       "Tint laws vary by state. We'll help you choose compliant options that meet local regulations while maximizing benefits.",
   },
-  {
-    question: "Can I wash my car after tinting?",
-    answer:
-      "Wait 3-5 days after installation before washing. This allows the film to fully cure and adhere properly.",
-  },
 ];
 
 const WHY_CHOOSE_US = [
   "Free consultation and quotes",
-  "Lifetime warranty on all installations",
+  "7-year warranty on all installations",
   "Premium quality films",
   "Expert certified installers",
   "Same-day service available",
@@ -231,7 +227,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 transition-colors focus:border-yellow-500 focus:outline-none"
-                      placeholder="john@example.com"
+                      placeholder="you@example.com"
                     />
                   </div>
 
@@ -250,7 +246,7 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 transition-colors focus:border-yellow-500 focus:outline-none"
-                      placeholder="(123) 456-7890"
+                      placeholder="(555) 000-0000"
                     />
                   </div>
 
@@ -317,7 +313,7 @@ export default function ContactPage() {
               {/* Map */}
               <div className="h-96 overflow-hidden rounded-2xl bg-slate-200 shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968459391!3d40.75889797932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                  src={BUSINESS.googleMapsEmbedUrl}
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -325,6 +321,7 @@ export default function ContactPage() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="D&D Sun Control Location"
+                  sandbox="allow-scripts allow-same-origin"
                 />
               </div>
 
@@ -353,11 +350,11 @@ export default function ContactPage() {
                   directly.
                 </p>
                 <a
-                  href="tel:+1234567890"
+                  href={BUSINESS.phoneHref}
                   className="inline-flex items-center space-x-2 rounded-full bg-yellow-500 px-6 py-3 font-semibold text-slate-900 transition-all hover:scale-105 hover:bg-yellow-600"
                 >
                   <Phone className="h-5 w-5" />
-                  <span>(123) 456-7890</span>
+                  <span>{BUSINESS.phone}</span>
                 </a>
               </div>
             </motion.div>

@@ -1,20 +1,22 @@
+import { BUSINESS } from "@/lib/config";
+
 export function LocalBusinessJsonLd() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://danddsuncontrol.com",
-    name: "D&D Sun Control",
+    "@id": BUSINESS.siteUrl,
+    name: BUSINESS.name,
     description:
       "Professional window tinting services for automotive, residential, and commercial applications. UV protection, heat reduction, and privacy enhancement.",
-    url: "https://danddsuncontrol.com",
-    telephone: "+1234567890",
-    email: "info@danddsuncontrol.com",
+    url: BUSINESS.siteUrl,
+    telephone: BUSINESS.phoneE164,
+    email: BUSINESS.email,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "123 Main Street",
-      addressLocality: "City",
-      addressRegion: "ST",
-      postalCode: "12345",
+      streetAddress: BUSINESS.address.street,
+      addressLocality: BUSINESS.address.city,
+      addressRegion: BUSINESS.address.state,
+      postalCode: BUSINESS.address.zip,
       addressCountry: "US",
     },
     openingHoursSpecification: [
@@ -32,7 +34,7 @@ export function LocalBusinessJsonLd() {
       },
     ],
     priceRange: "$$",
-    image: "https://danddsuncontrol.com/images/logo.png",
+    image: `${BUSINESS.siteUrl}/images/logo.png`,
     sameAs: [],
     hasOfferCatalog: {
       "@type": "OfferCatalog",

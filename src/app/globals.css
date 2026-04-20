@@ -33,3 +33,20 @@ body {
     -webkit-tap-highlight-color: transparent;
   }
 }
+
+/* Infinite scroll animation for client banner — GPU composited for no stutter */
+@keyframes marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
