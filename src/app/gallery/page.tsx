@@ -13,102 +13,27 @@ const CATEGORIES = [
 ];
 
 const GALLERY_ITEMS = [
-  {
-    id: 1,
-    category: "automotive",
-    title: "Luxury Sedan - 20% Tint",
-    image:
-      "https://images.unsplash.com/photo-1581043999816-2be8c1cdb13e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibGFjayUyMGNhciUyMHRpbnRlZCUyMHdpbmRvd3MlMjBzaWRlfGVufDF8fHx8MTc3MDk2MDM3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Professional ceramic tint on luxury sedan",
-  },
-  {
-    id: 2,
-    category: "automotive",
-    title: "SUV Complete Package",
-    image:
-      "https://images.unsplash.com/photo-1768024175254-373f5069324d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBzdXYlMjB0aW50ZWQlMjB3aW5kb3dzfGVufDF8fHx8MTc3MDk2MDM3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Full tint package with premium film",
-  },
-  {
-    id: 3,
-    category: "automotive",
-    title: "Sports Car Installation",
-    image:
-      "https://images.unsplash.com/photo-1767001621217-f40d93b4b0a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBjYXIlMjBkYXJrJTIwd2luZG93c3xlbnwxfHx8fDE3NzA5NjAzNzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "High-performance ceramic tint",
-  },
-  {
-    id: 4,
-    category: "automotive",
-    title: "Car Interior View",
-    image:
-      "https://images.unsplash.com/photo-1721497045131-7aec80cb104f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjYXIlMjBpbnRlcmlvciUyMHRpbnRlZCUyMHdpbmRvd3N8ZW58MXx8fHwxNzcwOTYwMjYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Interior view showcasing tint quality",
-  },
-  {
-    id: 5,
-    category: "automotive",
-    title: "Professional Installation",
-    image:
-      "https://images.unsplash.com/photo-1631379879495-23a8e79abed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjB3aW5kb3clMjB0aW50aW5nJTIwaW5zdGFsbGF0aW9uJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3MDk2MDM3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Expert installation in progress",
-  },
-  {
-    id: 6,
-    category: "automotive",
-    title: "Luxury Vehicle Detail",
-    image:
-      "https://images.unsplash.com/photo-1758804025235-588a3f77326a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBjYXIlMjB3aW5kc2hpZWxkfGVufDF8fHx8MTc3MDk2MDI2NHww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Premium windshield treatment",
-  },
-  {
-    id: 7,
-    category: "residential",
-    title: "Modern Home Windows",
-    image:
-      "https://images.unsplash.com/photo-1760561148422-bbb515696fb7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBob21lJTIwd2luZG93cyUyMGV4dGVyaW9yfGVufDF8fHx8MTc3MDk2MDM3NHww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Residential energy-efficient film installation",
-  },
-  {
-    id: 8,
-    category: "residential",
-    title: "Residential Building",
-    image:
-      "https://images.unsplash.com/photo-1538056760650-96bfa0545061?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXNpZGVudGlhbCUyMHdpbmRvdyUyMHRpbnRpbmclMjBidWlsZGluZ3xlbnwxfHx8fDE3NzA5NjAyNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Complete residential tinting project",
-  },
-  {
-    id: 9,
-    category: "commercial",
-    title: "Office Building",
-    image:
-      "https://images.unsplash.com/photo-1660496247667-3fb697c396af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjBidWlsZGluZyUyMGdsYXNzJTIwd2luZG93c3xlbnwxfHx8fDE3NzA5NjAyNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Commercial office building project",
-  },
-  {
-    id: 10,
-    category: "commercial",
-    title: "Commercial Facade",
-    image:
-      "https://images.unsplash.com/photo-1763046472163-32c74523903e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21tZXJjaWFsJTIwYnVpbGRpbmclMjBmYWNhZGUlMjB3aW5kb3dzfGVufDF8fHx8MTc3MDk2MDM3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Large-scale commercial installation",
-  },
-  {
-    id: 11,
-    category: "automotive",
-    title: "Professional Detailing",
-    image:
-      "https://images.unsplash.com/photo-1605437211365-7257403ea287?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBkZXRhaWxpbmclMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzcwOTYwMjY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Complete vehicle detailing and tinting",
-  },
-  {
-    id: 12,
-    category: "automotive",
-    title: "Dark Tint Application",
-    image:
-      "https://images.unsplash.com/photo-1612126413358-8ae4b09e0324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjB3aW5kb3clMjB0aW50aW5nJTIwZGFya3xlbnwxfHx8fDE3NzA5NjAyNjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Premium dark tint finish",
-  },
+  { id: 1, category: "automotive", title: "Jaguar - Premium Tint", image: "/images/work/auto/auto1.jpg", description: "Full tint package on luxury Jaguar sedan" },
+  { id: 2, category: "automotive", title: "Automotive Tint", image: "/images/work/auto/auto2.jpg", description: "Professional window tint installation" },
+  { id: 3, category: "automotive", title: "Automotive Tint", image: "/images/work/auto/auto3.jpg", description: "Dark tint for privacy and heat reduction" },
+  { id: 4, category: "automotive", title: "Automotive Tint", image: "/images/work/auto/auto4.jpg", description: "Premium film applied to all windows" },
+  { id: 5, category: "automotive", title: "Automotive Tint", image: "/images/work/auto/auto5.jpg", description: "Professional ceramic tint installation" },
+  { id: 6, category: "automotive", title: "Automotive Tint", image: "/images/work/auto/auto6.jpg", description: "Complete tint package" },
+  { id: 7, category: "automotive", title: "McLaren - Exotic Tint", image: "/images/work/auto/mclauren.jpg", description: "High-performance tint on exotic vehicle" },
+  { id: 8, category: "residential", title: "Residential Tinting", image: "/images/work/residential/residential1.jpg", description: "Energy-efficient window film installation" },
+  { id: 9, category: "residential", title: "Residential Tinting", image: "/images/work/residential/residential2.jpg", description: "Home window tinting for privacy and comfort" },
+  { id: 10, category: "residential", title: "Residential Tinting", image: "/images/work/residential/residential3.jpg", description: "UV-blocking film on residential windows" },
+  { id: 11, category: "residential", title: "Residential Tinting", image: "/images/work/residential/residential4.jpg", description: "Residential tinting project completion" },
+  { id: 12, category: "residential", title: "Residential Tinting", image: "/images/work/residential/residential5.jpg", description: "Professional residential film installation" },
+  { id: 13, category: "commercial", title: "Commercial Tinting", image: "/images/work/commercial/commercial1.jpg", description: "Large-scale commercial window tinting" },
+  { id: 14, category: "commercial", title: "Commercial Tinting", image: "/images/work/commercial/commercial2.jpg", description: "Office building tinting project" },
+  { id: 15, category: "commercial", title: "Commercial Tinting", image: "/images/work/commercial/commercial3.jpg", description: "Commercial installation in progress" },
+  { id: 16, category: "commercial", title: "KARK News", image: "/images/work/commercial/kark.jpg", description: "Commercial tinting for KARK News" },
+  { id: 17, category: "commercial", title: "Commercial Tinting", image: "/images/work/commercial/commercial4.jpg", description: "Professional commercial film application" },
+  { id: 18, category: "automotive", title: "Paint Protection Film", image: "/images/work/paint-protection/ppf1.jpg", description: "Clear paint protection film installation" },
+  { id: 19, category: "automotive", title: "Paint Protection Film", image: "/images/work/paint-protection/ppf2.jpg", description: "Full front PPF package" },
+  { id: 20, category: "automotive", title: "Camry Before PPF", image: "/images/work/paint-protection/camry-before.jpg", description: "Vehicle before paint protection film" },
+  { id: 21, category: "automotive", title: "Camry After PPF", image: "/images/work/paint-protection/camry-after.jpg", description: "Vehicle after paint protection film applied" },
 ];
 
 const STATS = [

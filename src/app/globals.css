@@ -33,3 +33,17 @@ body {
     -webkit-tap-highlight-color: transparent;
   }
 }
+
+/* Infinite scroll animation for client banner */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}

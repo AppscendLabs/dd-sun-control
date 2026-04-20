@@ -58,8 +58,7 @@ const SERVICES = [
     title: "Automotive Window Tinting",
     description:
       "Professional window tinting for all vehicle types including cars, trucks, SUVs, and luxury vehicles.",
-    image:
-      "https://images.unsplash.com/photo-1612126413358-8ae4b09e0324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjB3aW5kb3clMjB0aW50aW5nJTIwZGFya3xlbnwxfHx8fDE3NzA5NjAyNjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "/images/work/auto/auto1.jpg",
     benefits: [
       "Blocks 99% of harmful UV rays",
       "Reduces interior heat by up to 60%",
@@ -74,8 +73,7 @@ const SERVICES = [
     title: "Residential Window Tinting",
     description:
       "Transform your home with energy-efficient window films that provide comfort, privacy, and protection.",
-    image:
-      "https://images.unsplash.com/photo-1538056760650-96bfa0545061?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXNpZGVudGlhbCUyMHdpbmRvdyUyMHRpbnRpbmclMjBidWlsZGluZ3xlbnwxfHx8fDE3NzA5NjAyNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "/images/work/residential/residential1.jpg",
     benefits: [
       "Reduce energy costs by up to 30%",
       "Protect furniture and flooring from UV damage",
@@ -90,8 +88,7 @@ const SERVICES = [
     title: "Commercial Window Tinting",
     description:
       "Professional solutions for offices, retail spaces, and commercial buildings to enhance comfort and reduce costs.",
-    image:
-      "https://images.unsplash.com/photo-1660496247667-3fb697c396af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjBidWlsZGluZyUyMGdsYXNzJTIwd2luZG93c3xlbnwxfHx8fDE3NzA5NjAyNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "/images/work/commercial/commercial1.jpg",
     benefits: [
       "Significant energy savings for buildings",
       "Improved employee comfort and productivity",
@@ -106,8 +103,7 @@ const SERVICES = [
     title: "Paint Protection Film",
     description:
       "Protect your vehicle's paint from chips, scratches, and environmental damage with premium PPF.",
-    image:
-      "https://images.unsplash.com/photo-1605437211365-7257403ea287?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBkZXRhaWxpbmclMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzcwOTYwMjY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "/images/work/paint-protection/ppf1.jpg",
     benefits: [
       "Self-healing technology for minor scratches",
       "Maintains vehicle resale value",

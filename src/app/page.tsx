@@ -11,6 +11,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { GoogleReviews } from "@/components/google-reviews";
+import { ClientBanner } from "@/components/client-banner";
 
 const BENEFITS = [
   {
@@ -38,9 +39,8 @@ const SERVICES = [
     title: "Automotive Tinting",
     description:
       "Professional window tinting for cars, trucks, and SUVs. Enhance privacy, reduce heat, and protect your interior.",
-    image:
-      "https://images.unsplash.com/photo-1612126413358-8ae4b09e0324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjB3aW5kb3clMjB0aW50aW5nJTIwZGFya3xlbnwxfHx8fDE3NzA5NjAyNjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    imageAlt: "Car with professionally installed dark window tint for UV protection and privacy",
+    image: "/images/work/auto/auto1.jpg",
+    imageAlt: "Car with professionally installed dark window tint by D&D Sun Control",
     features: [
       "Heat Reduction",
       "UV Protection",
@@ -52,9 +52,8 @@ const SERVICES = [
     title: "Residential Tinting",
     description:
       "Transform your home with energy-efficient window films that reduce heat and protect your furnishings.",
-    image:
-      "https://images.unsplash.com/photo-1538056760650-96bfa0545061?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXNpZGVudGlhbCUyMHdpbmRvdyUyMHRpbnRpbmclMjBidWlsZGluZ3xlbnwxfHx8fDE3NzA5NjAyNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    imageAlt: "Residential home with energy-efficient window tinting film installed",
+    image: "/images/work/residential/residential1.jpg",
+    imageAlt: "Residential home with energy-efficient window tinting film by D&D Sun Control",
     features: [
       "Energy Savings",
       "Fade Protection",
@@ -66,9 +65,8 @@ const SERVICES = [
     title: "Commercial Tinting",
     description:
       "Professional solutions for offices and commercial buildings. Improve comfort and reduce energy costs.",
-    image:
-      "https://images.unsplash.com/photo-1660496247667-3fb697c396af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjBidWlsZGluZyUyMGdsYXNzJTIwd2luZG93c3xlbnwxfHx8fDE3NzA5NjAyNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    imageAlt: "Commercial office building with professional window tinting for energy savings",
+    image: "/images/work/commercial/commercial1.jpg",
+    imageAlt: "Commercial building with professional window tinting by D&D Sun Control",
     features: [
       "Professional Appearance",
       "Cost Efficiency",
@@ -191,6 +189,8 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+
+      <ClientBanner />
 
       {/* Benefits Section */}
       <section className="bg-slate-50 py-20">
