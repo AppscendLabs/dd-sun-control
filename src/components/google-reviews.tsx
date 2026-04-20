@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
+import { BUSINESS } from "@/lib/config";
 
 interface Review {
   author_name: string;
@@ -16,9 +17,6 @@ interface ReviewsData {
   total: number;
   reviews: Review[];
 }
-
-const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/place/?q=place_id:ChIJacjQr4i-0ocRGcGKv2tiWSs";
 
 function StarRating({ rating, size = "sm" }: { rating: number; size?: "sm" | "lg" }) {
   const cls = size === "lg" ? "h-6 w-6" : "h-5 w-5";
@@ -57,7 +55,7 @@ export function GoogleReviews() {
       .then((d) => {
         if (d.reviews && d.reviews.length > 0) setData(d);
       })
-      .catch(() => {})
+      .catch((err) => console.error("Failed to fetch reviews:", err))
       .finally(() => setLoading(false));
   }, []);
 
@@ -170,7 +168,7 @@ export function GoogleReviews() {
           className="text-center"
         >
           <a
-            href={GOOGLE_MAPS_URL}
+            href={BUSINESS.googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 rounded-full border-2 border-white/30 bg-white/10 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"

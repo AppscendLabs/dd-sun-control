@@ -3,30 +3,31 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { BUSINESS } from "@/lib/config";
 
 const CONTACT_INFO = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["(501) 945-7474", "Mon-Sat: 8AM-6PM"],
-    link: "tel:+15019457474",
+    details: [BUSINESS.phone, "Mon-Sat: 8AM-6PM"],
+    link: BUSINESS.phoneHref,
   },
   {
     icon: Mail,
     title: "Email",
-    details: ["info@danddsuncontrol.com", "We reply within 24 hours"],
-    link: "mailto:info@danddsuncontrol.com",
+    details: [BUSINESS.email, "We reply within 24 hours"],
+    link: `mailto:${BUSINESS.email}`,
   },
   {
     icon: MapPin,
     title: "Location",
-    details: ["4221 North Richards Road", "North Little Rock, AR 72117"],
-    link: "https://maps.google.com/?q=4221+North+Richards+Road+North+Little+Rock+AR+72117",
+    details: [BUSINESS.address.street, `${BUSINESS.address.city}, ${BUSINESS.address.state} ${BUSINESS.address.zip}`],
+    link: BUSINESS.googleMapsDirectionsUrl,
   },
   {
     icon: Clock,
     title: "Hours",
-    details: ["Mon-Fri: 8AM-6PM", "Sat: 9AM-4PM"],
+    details: [BUSINESS.hours.weekdays, BUSINESS.hours.saturday],
     link: null,
   },
 ];
@@ -226,7 +227,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 transition-colors focus:border-yellow-500 focus:outline-none"
-                      placeholder="john@example.com"
+                      placeholder="you@example.com"
                     />
                   </div>
 
@@ -245,7 +246,7 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 transition-colors focus:border-yellow-500 focus:outline-none"
-                      placeholder="(501) 945-7474"
+                      placeholder="(555) 000-0000"
                     />
                   </div>
 
@@ -312,7 +313,7 @@ export default function ContactPage() {
               {/* Map */}
               <div className="h-96 overflow-hidden rounded-2xl bg-slate-200 shadow-lg">
                 <iframe
-                  src="https://maps.google.com/maps?q=4221+North+Richards+Road,+North+Little+Rock,+AR+72117&output=embed"
+                  src={BUSINESS.googleMapsEmbedUrl}
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -320,6 +321,7 @@ export default function ContactPage() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="D&D Sun Control Location"
+                  sandbox="allow-scripts allow-same-origin"
                 />
               </div>
 
@@ -348,11 +350,11 @@ export default function ContactPage() {
                   directly.
                 </p>
                 <a
-                  href="tel:+15019457474"
+                  href={BUSINESS.phoneHref}
                   className="inline-flex items-center space-x-2 rounded-full bg-yellow-500 px-6 py-3 font-semibold text-slate-900 transition-all hover:scale-105 hover:bg-yellow-600"
                 >
                   <Phone className="h-5 w-5" />
-                  <span>(501) 945-7474</span>
+                  <span>{BUSINESS.phone}</span>
                 </a>
               </div>
             </motion.div>

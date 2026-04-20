@@ -43,12 +43,14 @@ export const metadata: Metadata = {
     title: "D&D Sun Control | Premium Window Tinting Services",
     description:
       "Professional window tinting for automotive, residential, and commercial applications.",
+    images: [{ url: "/images/logo.png", width: 1200, height: 630, alt: "D&D Sun Control" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "D&D Sun Control | Premium Window Tinting Services",
     description:
       "Professional window tinting for automotive, residential, and commercial applications.",
+    images: ["/images/logo.png"],
   },
   robots: {
     index: true,

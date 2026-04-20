@@ -17,15 +17,16 @@ export async function GET() {
     const data = await res.json();
 
     if (data.status !== "OK") {
-      return NextResponse.json({ error: data.status }, { status: 500 });
+      return NextResponse.json({ error: "Service unavailable" }, { status: 500 });
     }
 
     return NextResponse.json({
-      rating: data.result.rating ?? null,
-      total: data.result.user_ratings_total ?? null,
-      reviews: data.result.reviews ?? [],
+      rating: data.result?.rating ?? null,
+      total: data.result?.user_ratings_total ?? null,
+      reviews: data.result?.reviews ?? [],
     });
-  } catch {
+  } catch (err) {
+    console.error("Google Places API error:", err);
     return NextResponse.json({ error: "Failed to fetch" }, { status: 500 });
   }
 }
