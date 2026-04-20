@@ -1,11 +1,11 @@
 import Image from "next/image";
 
 const CLIENTS = [
-  { name: "Marriott Hotels", src: "/images/clients/marriott.png", width: 160 },
-  { name: "Holiday Inn", src: "/images/clients/holiday-inn.png", width: 120 },
-  { name: "Baptist Health", src: "/images/clients/baptist-health.png", width: 180 },
-  { name: "Stephens Inc.", src: "/images/clients/stephens.png", width: 150 },
-  { name: "Roberts-McNutt", src: "/images/clients/roberts-mcnutt.png", width: 160 },
+  { name: "Marriott Hotels", src: "/images/clients/marriott.png", width: 160, imgClass: "h-14 w-auto" },
+  { name: "Holiday Inn", src: "/images/clients/holiday-inn.png", width: 120, imgClass: "h-14 w-auto" },
+  { name: "Baptist Health", src: "/images/clients/baptist-health.png", width: 180, imgClass: "h-8 w-auto" },
+  { name: "Stephens Inc.", src: "/images/clients/stephens.png", width: 150, imgClass: "h-8 w-auto" },
+  { name: "Roberts-McNutt", src: "/images/clients/roberts-mcnutt.png", width: 160, imgClass: "h-12 w-auto" },
 ];
 
 export function ClientBanner() {
@@ -24,13 +24,13 @@ export function ClientBanner() {
 
             <div className="animate-marquee flex w-max items-center gap-14">
               {[...CLIENTS, ...CLIENTS].map((client, i) => (
-                <div key={i} className="flex h-10 shrink-0 items-center justify-center">
+                <div key={i} className="flex h-14 shrink-0 items-center justify-center">
                   <Image
                     src={client.src}
                     alt={client.name}
                     width={client.width}
-                    height={40}
-                    className="h-8 w-auto object-contain brightness-0 invert opacity-50 transition-opacity duration-300 hover:opacity-90"
+                    height={56}
+                    className={`${client.imgClass} object-contain brightness-0 invert opacity-50 transition-opacity duration-300 hover:opacity-90`}
                   />
                 </div>
               ))}
