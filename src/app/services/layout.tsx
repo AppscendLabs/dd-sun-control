@@ -1,10 +1,21 @@
 import type { Metadata } from "next";
 import { ServiceJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld";
+import { BUSINESS } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Professional Window Tinting Services",
+  title: "Window Tinting Services North Little Rock AR",
   description:
-    "Professional automotive, residential, and commercial window tinting services. Paint protection film, UV protection, heat reduction, and privacy enhancement.",
+    "Professional automotive, residential & commercial window tinting in North Little Rock, AR. Paint protection film, 3M authorized films, UV protection & heat reduction. 7-year warranty. Call (501) 945-7474.",
+  keywords: [
+    "automotive window tinting North Little Rock",
+    "residential window tinting Arkansas",
+    "commercial window tinting Little Rock AR",
+    "paint protection film North Little Rock",
+    "3M window film authorized dealer Arkansas",
+    "car tint shop Little Rock",
+    "window film installation Arkansas",
+    "UV window film North Little Rock",
+  ],
   alternates: {
     canonical: "/services",
   },
@@ -43,8 +54,8 @@ export default function ServicesLayout({
       <ServiceJsonLd services={SERVICES_DATA} />
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: "https://danddsuncontrol.com" },
-          { name: "Services", url: "https://danddsuncontrol.com/services" },
+          { name: "Home", url: BUSINESS.siteUrl },
+          { name: "Services", url: `${BUSINESS.siteUrl}/services` },
         ]}
       />
       {children}

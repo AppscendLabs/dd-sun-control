@@ -1,32 +1,33 @@
 import type { MetadataRoute } from "next";
+import { BUSINESS } from "@/lib/config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://danddsuncontrol.com";
+  const base = BUSINESS.siteUrl;
 
   return [
     {
-      url: baseUrl,
+      url: base,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: `${baseUrl}/services`,
+      url: `${base}/services`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/gallery`,
+      url: `${base}/gallery`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `${base}/contact`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.9,
     },
   ];
 }
