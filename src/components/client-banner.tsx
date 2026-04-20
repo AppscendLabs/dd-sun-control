@@ -10,36 +10,32 @@ const CLIENTS = [
 
 export function ClientBanner() {
   return (
-    <section className="bg-slate-800 py-10">
-      <div className="mb-6 text-center">
-        <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">
-          Trusted by leading businesses across Arkansas
-        </p>
-      </div>
+    <section className="bg-slate-50 py-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="overflow-hidden rounded-2xl bg-slate-800 px-6 py-5">
+          <p className="mb-4 text-center text-xs font-semibold uppercase tracking-widest text-slate-400">
+            Trusted by leading businesses across Arkansas
+          </p>
 
-      {/* Scrolling track — overflow hidden with fade edges */}
-      <div className="relative overflow-hidden">
-        {/* Left fade */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-slate-800 to-transparent" />
-        {/* Right fade */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-slate-800 to-transparent" />
+          {/* Scrolling track with edge fades */}
+          <div className="relative overflow-hidden">
+            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-slate-800 to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-slate-800 to-transparent" />
 
-        {/* Duplicated logo strip for seamless loop */}
-        <div className="animate-marquee flex w-max items-center gap-16 px-8">
-          {[...CLIENTS, ...CLIENTS].map((client, i) => (
-            <div
-              key={i}
-              className="flex h-14 shrink-0 items-center justify-center"
-            >
-              <Image
-                src={client.src}
-                alt={client.name}
-                width={client.width}
-                height={56}
-                className="h-10 w-auto object-contain brightness-0 invert opacity-60 transition-opacity duration-300 hover:opacity-100"
-              />
+            <div className="animate-marquee flex w-max items-center gap-14">
+              {[...CLIENTS, ...CLIENTS].map((client, i) => (
+                <div key={i} className="flex h-10 shrink-0 items-center justify-center">
+                  <Image
+                    src={client.src}
+                    alt={client.name}
+                    width={client.width}
+                    height={40}
+                    className="h-8 w-auto object-contain brightness-0 invert opacity-50 transition-opacity duration-300 hover:opacity-90"
+                  />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
