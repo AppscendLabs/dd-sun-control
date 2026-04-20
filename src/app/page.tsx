@@ -109,32 +109,46 @@ const ENERGY_BENEFITS = [
 
 const TEAM_MEMBERS = [
   {
-    name: "David Martinez",
-    role: "Owner & Lead Technician",
-    image:
-      "https://images.unsplash.com/photo-1629507208649-70919ca33793?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBwb3J0cmFpdCUyMGJ1c2luZXNzfGVufDF8fHx8MTc3MDg4MjMxNHww&ixlib=rb-4.1.0&q=80&w=1080",
-    bio: "30+ years experience in professional window tinting",
+    name: "Evans Dietz",
+    role: "Owner",
+    image: "/images/team/evans-dietz.jpg",
+    bio: "30+ years experience leading D&D Sun Control",
   },
   {
-    name: "Diana Chen",
-    role: "Operations Manager",
-    image:
-      "https://images.unsplash.com/photo-1610387694365-19fafcc86d86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMHBvcnRyYWl0JTIwYnVzaW5lc3N8ZW58MXx8fHwxNzcwODczNjI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    bio: "Ensures every project exceeds customer expectations",
+    name: "Jennifer Jahns",
+    role: "Office Manager",
+    image: "/images/team/jennifer-jahns.jpg",
+    bio: "Keeps operations running smoothly for every client",
   },
   {
-    name: "Marcus Johnson",
-    role: "Senior Installer",
-    image:
-      "https://images.unsplash.com/photo-1660074127797-1c429fbb8cd6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobmljaWFuJTIwcHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzcwOTYxNTAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    bio: "Certified in automotive and residential installations",
+    name: "Brian Battie",
+    role: "Commercial & Residential",
+    image: "/images/team/brian-battie.jpg",
+    bio: "Expert installer for commercial and residential projects",
   },
   {
-    name: "Sarah Thompson",
-    role: "Customer Service Lead",
-    image:
-      "https://images.unsplash.com/photo-1770058428154-9eee8a6a1fbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHBlcnNvbiUyMHNtaWxpbmclMjBwb3J0cmFpdHxlbnwxfHx8fDE3NzA5NjE1MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    bio: "Here to help you find the perfect tinting solution",
+    name: "Melvin Garrett",
+    role: "Automotive & Paint Protection",
+    image: "/images/team/melvin-garrett.jpg",
+    bio: "Specialist in automotive tint and paint protection film",
+  },
+  {
+    name: "Henry Woodward",
+    role: "Installer",
+    image: "/images/team/henry-woodward.jpg",
+    bio: "Precision installer with an eye for quality",
+  },
+  {
+    name: "Erin Shahan",
+    role: "Bookkeeper & HR",
+    image: "/images/team/erin-shahan.jpg",
+    bio: "Handles the numbers and takes care of our team",
+  },
+  {
+    name: "Ethan Reed",
+    role: "Installer — NLR & NWA",
+    image: "/images/team/ethan-reed.jpg",
+    bio: "Serving North Little Rock and Northwest Arkansas",
   },
 ];
 
@@ -436,7 +450,7 @@ export default function HomePage() {
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
             {TEAM_MEMBERS.map((member, index) => (
               <motion.div
                 key={member.name}
