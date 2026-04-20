@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { LocalBusinessJsonLd } from "@/components/seo/json-ld";
+import { BUSINESS } from "@/lib/config";
 import "./globals.css";
 
 const inter = Inter({
@@ -25,14 +26,18 @@ export const metadata: Metadata = {
   description:
     "Professional window tinting for automotive, residential, and commercial applications. UV protection, heat reduction, and privacy enhancement.",
   keywords: [
-    "window tinting",
-    "car tinting",
-    "residential tinting",
-    "commercial tinting",
-    "UV protection",
-    "paint protection film",
+    "window tinting North Little Rock AR",
+    "window tinting Little Rock Arkansas",
+    "automotive window tinting Arkansas",
+    "residential window tinting",
+    "commercial window tinting",
+    "paint protection film Arkansas",
+    "3M window film dealer",
+    "UV protection window tint",
+    "car tinting near me",
+    "window tint shop North Little Rock",
   ],
-  metadataBase: new URL("https://danddsuncontrol.com"),
+  metadataBase: new URL(BUSINESS.siteUrl),
   alternates: {
     canonical: "/",
   },
@@ -72,6 +77,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://maps.googleapis.com" />
+        <link rel="preconnect" href="https://maps.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body className={`${inter.className} antialiased`}>
         <LocalBusinessJsonLd />
         <div className="min-h-screen bg-white">

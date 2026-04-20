@@ -7,10 +7,11 @@ export function LocalBusinessJsonLd() {
     "@id": BUSINESS.siteUrl,
     name: BUSINESS.name,
     description:
-      "Professional window tinting services for automotive, residential, and commercial applications. UV protection, heat reduction, and privacy enhancement.",
+      "Professional window tinting services for automotive, residential, and commercial applications in North Little Rock and Central Arkansas. UV protection, heat reduction, and privacy enhancement.",
     url: BUSINESS.siteUrl,
     telephone: BUSINESS.phoneE164,
     email: BUSINESS.email,
+    hasMap: BUSINESS.googleMapsUrl,
     address: {
       "@type": "PostalAddress",
       streetAddress: BUSINESS.address.street,
@@ -19,6 +20,22 @@ export function LocalBusinessJsonLd() {
       postalCode: BUSINESS.address.zip,
       addressCountry: "US",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 34.7765,
+      longitude: -92.2346,
+    },
+    areaServed: [
+      { "@type": "City", "name": "North Little Rock", "sameAs": "https://en.wikipedia.org/wiki/North_Little_Rock,_Arkansas" },
+      { "@type": "City", "name": "Little Rock" },
+      { "@type": "City", "name": "Sherwood" },
+      { "@type": "City", "name": "Jacksonville" },
+      { "@type": "City", "name": "Maumelle" },
+      { "@type": "City", "name": "Conway" },
+      { "@type": "City", "name": "Bryant" },
+      { "@type": "City", "name": "Benton" },
+      { "@type": "City", "name": "Cabot" },
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -77,12 +94,6 @@ export function LocalBusinessJsonLd() {
           },
         },
       ],
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      reviewCount: "3",
-      bestRating: "5",
     },
   };
 
