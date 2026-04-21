@@ -115,6 +115,18 @@ const TEAM_MEMBERS = [
     bio: "30+ years experience leading D&D Sun Control",
   },
   {
+    name: "Erin Shahan",
+    role: "Bookkeeper & HR",
+    image: "/images/team/erin-shahan.jpg",
+    bio: "Handles the numbers and takes care of our team",
+  },
+  {
+    name: "Melvin Garrett",
+    role: "Automotive & Paint Protection",
+    image: "/images/team/melvin-garrett.jpg",
+    bio: "Specialist in automotive tint and paint protection film",
+  },
+  {
     name: "Jennifer Jahns",
     role: "Office Manager",
     image: "/images/team/jennifer-jahns.jpg",
@@ -127,22 +139,10 @@ const TEAM_MEMBERS = [
     bio: "Expert installer for commercial and residential projects",
   },
   {
-    name: "Melvin Garrett",
-    role: "Automotive & Paint Protection",
-    image: "/images/team/melvin-garrett.jpg",
-    bio: "Specialist in automotive tint and paint protection film",
-  },
-  {
     name: "Henry Woodward",
     role: "Installer",
     image: "/images/team/henry-woodward.jpg",
     bio: "Precision installer with an eye for quality",
-  },
-  {
-    name: "Erin Shahan",
-    role: "Bookkeeper & HR",
-    image: "/images/team/erin-shahan.jpg",
-    bio: "Handles the numbers and takes care of our team",
   },
   {
     name: "Ethan Reed",

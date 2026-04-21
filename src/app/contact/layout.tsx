@@ -21,6 +21,11 @@ export const metadata: Metadata = {
 
 const FAQ_DATA = [
   {
+    question: "What are your hours?",
+    answer:
+      "We are open Monday through Friday, 8:00 AM to 5:00 PM. We are closed on weekends.",
+  },
+  {
     question: "How long does window tinting take?",
     answer:
       "Most automotive tinting jobs take 2-4 hours. Residential and commercial projects vary based on size, typically 1-3 days.",
