@@ -172,7 +172,7 @@ export function HomePageClient() {
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-slate-900">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1748313764710-d52deb08d8d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aW5kb3clMjB0aW50aW5nJTIwaW5zdGFsbGF0aW9uJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3MDk2MzcwMHww&ixlib=rb-4.1.0&q=80&w=1080"
+            src="/images/hero.jpg"
             alt="Professional window tinting installation by D&D Sun Control technician"
             fill
             sizes="100vw"
