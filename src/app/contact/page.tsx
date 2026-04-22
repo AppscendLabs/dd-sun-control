@@ -9,7 +9,7 @@ const CONTACT_INFO = [
   {
     icon: Phone,
     title: "Phone",
-    details: [BUSINESS.phone, "Mon-Sat: 8AM-6PM"],
+    details: [BUSINESS.phone, BUSINESS.hours.weekdays],
     link: BUSINESS.phoneHref,
   },
   {
@@ -27,7 +27,7 @@ const CONTACT_INFO = [
   {
     icon: Clock,
     title: "Hours",
-    details: [BUSINESS.hours.weekdays, BUSINESS.hours.saturday],
+    details: [BUSINESS.hours.weekdays, "Closed Weekends"],
     link: null,
   },
 ];
