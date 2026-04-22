@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 import { BUSINESS } from "@/lib/config";
 
 const QUICK_LINKS = [
@@ -18,9 +18,8 @@ const SERVICES = [
 ];
 
 const SOCIAL_LINKS = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61561210779874", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/danddsuncontrol/", label: "Instagram" },
 ];
 
 export function Footer() {
@@ -55,6 +54,8 @@ export function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 transition-colors hover:bg-yellow-500"
                 >
                   <social.icon className="h-5 w-5" />
