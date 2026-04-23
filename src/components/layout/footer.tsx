@@ -132,11 +132,19 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-slate-800 pt-8 text-center">
+        <div className="mt-8 border-t border-slate-800 pt-8 flex flex-col items-center gap-2 sm:flex-row sm:justify-between">
           <p className="text-sm text-slate-400">
             &copy; {new Date().getFullYear()} D&D Sun Control. All rights
             reserved.
           </p>
+          <a
+            href="https://www.appscendlabs.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-slate-500 transition-colors hover:text-yellow-500"
+          >
+            Built by Appscend Labs
+          </a>
         </div>
       </div>
     </footer>
