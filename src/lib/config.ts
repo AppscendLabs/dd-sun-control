@@ -1,6 +1,7 @@
 export const BUSINESS = {
-  name: "D&D Sun Control",
-  tagline: "Window Tinting Experts",
+  name: "D & D Sun Control, Inc.",
+  shortName: "D & D Sun Control",
+  tagline: "Professional Window Tinting",
   phone: "(501) 945-7474",
   phoneHref: "tel:+15019457474",
   phoneE164: "+15019457474",
