@@ -468,7 +468,7 @@ export function HomePageClient() {
           </div>
 
           <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
-            {TEAM_MEMBERS.map((member, index) => (
+            {TEAM_MEMBERS.slice(0, 4).map((member, index) => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -497,6 +497,63 @@ export function HomePageClient() {
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12 text-center"
+          >
+            <Link
+              href="/team"
+              className="inline-flex items-center space-x-2 rounded-full border-2 border-slate-200 px-8 py-3 font-semibold text-slate-700 transition-all hover:border-yellow-500 hover:text-yellow-600"
+            >
+              <span>Meet the Full Team</span>
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Sister Company — Roll'n Wrapz */}
+      <section className="bg-slate-900 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center gap-8 rounded-2xl border border-slate-700 bg-slate-800 p-8 text-center md:flex-row md:text-left lg:p-12"
+          >
+            <div className="shrink-0">
+              <Image
+                src="/images/rollnwrapz-logo.png"
+                alt="Roll'n Wrapz logo"
+                width={160}
+                height={80}
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+            <div className="flex-1">
+              <p className="mb-1 text-sm font-semibold uppercase tracking-widest text-yellow-500">
+                Sister Company
+              </p>
+              <h2 className="mb-2 text-2xl font-bold text-white sm:text-3xl">
+                Roll&apos;n Wrapz
+              </h2>
+              <p className="mb-6 text-lg text-slate-400">
+                Looking for vehicle wraps, graphics, or full custom builds? Check out our sister company — the same trusted craftsmanship, built for wraps.
+              </p>
+              <a
+                href="https://rollnwrapz.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 rounded-full bg-yellow-500 px-6 py-3 font-semibold text-slate-900 transition-all hover:scale-105 hover:bg-yellow-400"
+              >
+                <span>Visit Roll&apos;n Wrapz</span>
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 

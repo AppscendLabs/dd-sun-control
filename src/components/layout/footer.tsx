@@ -7,6 +7,7 @@ const QUICK_LINKS = [
   { name: "Home", path: "/" },
   { name: "Services", path: "/services" },
   { name: "Gallery", path: "/gallery" },
+  { name: "Our Team", path: "/team" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -32,15 +33,15 @@ export function Footer() {
             <div className="mb-4 flex items-center space-x-3">
               <Image
                 src="/images/logo.png"
-                alt="D&D Sun Control - Window Tinting Experts Logo"
+                alt="D & D Sun Control - Professional Window Tinting Logo"
                 width={40}
                 height={40}
                 className="h-10 w-auto"
               />
               <div className="flex flex-col">
-                <span className="text-lg font-bold">D&D Sun Control</span>
+                <span className="text-lg font-bold">{BUSINESS.shortName}</span>
                 <span className="text-xs font-semibold text-yellow-500">
-                  Window Tinting Experts
+                  {BUSINESS.tagline}
                 </span>
               </div>
             </div>
@@ -132,19 +133,30 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-slate-800 pt-8 flex flex-col items-center gap-2 sm:flex-row sm:justify-between">
+        <div className="mt-8 border-t border-slate-800 pt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
           <p className="text-sm text-slate-400">
-            &copy; {new Date().getFullYear()} D&D Sun Control. All rights
+            &copy; {new Date().getFullYear()} {BUSINESS.name}. All rights
             reserved.
           </p>
-          <a
-            href="https://www.appscendlabs.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-slate-500 transition-colors hover:text-yellow-500"
-          >
-            Built by Appscend Labs
-          </a>
+          <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-4">
+            <a
+              href="https://rollnwrapz.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-slate-500 transition-colors hover:text-yellow-500"
+            >
+              Sister Company: Roll&apos;n Wrapz
+            </a>
+            <span className="hidden text-slate-700 sm:inline">·</span>
+            <a
+              href="https://www.appscendlabs.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-slate-500 transition-colors hover:text-yellow-500"
+            >
+              Built by Appscend Labs
+            </a>
+          </div>
         </div>
       </div>
     </footer>
