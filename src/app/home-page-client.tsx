@@ -525,9 +525,13 @@ export function HomePageClient() {
             className="flex flex-col items-center gap-8 rounded-2xl border border-slate-700 bg-slate-800 p-8 text-center md:flex-row md:text-left lg:p-12"
           >
             <div className="shrink-0">
-              <div className="inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-yellow-500 text-2xl font-black text-slate-900">
-                R&apos;n<br />W
-              </div>
+              <Image
+                src="/images/rollnwrapz-logo.png"
+                alt="Roll'n Wrapz logo"
+                width={160}
+                height={80}
+                className="h-16 w-auto object-contain"
+              />
             </div>
             <div className="flex-1">
               <p className="mb-1 text-sm font-semibold uppercase tracking-widest text-yellow-500">
