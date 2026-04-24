@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { name: "Home", path: "/" },
   { name: "Services", path: "/services" },
   { name: "Gallery", path: "/gallery" },
+  { name: "Our Team", path: "/team" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -62,7 +63,7 @@ export function Navbar() {
             <Link href="/" className="flex items-center space-x-3">
               <Image
                 src="/images/logo.png"
-                alt="D&D Sun Control - Window Tinting Experts Logo"
+                alt="D & D Sun Control - Professional Window Tinting Logo"
                 width={48}
                 height={48}
                 className="h-12 w-auto"
@@ -73,10 +74,10 @@ export function Navbar() {
                     shouldUseDarkText ? "text-slate-900" : "text-white"
                   }`}
                 >
-                  D&D Sun Control
+                  {BUSINESS.shortName}
                 </span>
                 <span className="text-xs font-semibold text-yellow-500">
-                  Window Tinting Experts
+                  {BUSINESS.tagline}
                 </span>
               </div>
             </Link>

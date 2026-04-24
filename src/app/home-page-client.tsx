@@ -468,7 +468,7 @@ export function HomePageClient() {
           </div>
 
           <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
-            {TEAM_MEMBERS.map((member, index) => (
+            {TEAM_MEMBERS.slice(0, 4).map((member, index) => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -497,6 +497,21 @@ export function HomePageClient() {
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12 text-center"
+          >
+            <Link
+              href="/team"
+              className="inline-flex items-center space-x-2 rounded-full border-2 border-slate-200 px-8 py-3 font-semibold text-slate-700 transition-all hover:border-yellow-500 hover:text-yellow-600"
+            >
+              <span>Meet the Full Team</span>
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </motion.div>
         </div>
       </section>
 

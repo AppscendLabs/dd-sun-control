@@ -342,6 +342,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="rounded-2xl border-2 border-slate-100 bg-white p-8 shadow-lg md:p-12"
           >
+            {/* Header */}
             <div className="flex flex-col items-center gap-8 md:flex-row">
               <div className="shrink-0 text-center">
                 <div className="inline-flex h-24 w-24 items-center justify-center rounded-2xl bg-red-600 text-4xl font-black text-white">
@@ -353,7 +354,7 @@ export default function ServicesPage() {
                   Authorized 3M Window Film Dealer
                 </h2>
                 <p className="mb-6 text-lg text-slate-600">
-                  We install genuine 3M window films — trusted worldwide for performance, clarity, and durability. Learn more about the films we use directly from 3M.
+                  We install genuine 3M window films — trusted worldwide for performance, clarity, and durability. Every film is customized to your exact needs, vehicle, or property.
                 </p>
                 <a
                   href="https://www.3m.com/3M/en_US/p/c/films-sheeting/window/"
@@ -364,6 +365,66 @@ export default function ServicesPage() {
                   <span>View 3M Window Films</span>
                   <ExternalLink className="h-4 w-4" />
                 </a>
+              </div>
+            </div>
+
+            {/* Film Series Grid */}
+            <div className="mt-10 border-t border-slate-100 pt-10">
+              <h3 className="mb-6 text-center text-xl font-bold text-slate-900">
+                3M Film Series — Find Your Perfect Match
+              </h3>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {[
+                  {
+                    series: "Crystalline Series",
+                    badge: "Best Heat Rejection",
+                    badgeColor: "bg-red-100 text-red-700",
+                    description: "Nearly clear film with the highest heat rejection available. Ideal for those who want maximum performance without a dark look.",
+                  },
+                  {
+                    series: "Ceramic IR Series",
+                    badge: "Premium",
+                    badgeColor: "bg-yellow-100 text-yellow-700",
+                    description: "Non-metallic ceramic technology that blocks infrared heat while maintaining signal clarity for GPS, satellite radio, and toll systems.",
+                  },
+                  {
+                    series: "FX-HP Series",
+                    badge: "Great Value",
+                    badgeColor: "bg-green-100 text-green-700",
+                    description: "High-performance color-stable film delivering excellent UV and heat rejection at an accessible price point. A top choice for everyday vehicles.",
+                  },
+                  {
+                    series: "Prestige Series",
+                    badge: "Residential & Commercial",
+                    badgeColor: "bg-blue-100 text-blue-700",
+                    description: "Designed for homes and businesses. Rejects up to 97% of infrared heat while maintaining a clear, natural appearance from inside and out.",
+                  },
+                  {
+                    series: "Safety & Security Film",
+                    badge: "Protection",
+                    badgeColor: "bg-slate-100 text-slate-700",
+                    description: "Holds shattered glass together on impact — protecting against break-ins, accidents, and severe weather. Available for auto, residential, and commercial.",
+                  },
+                  {
+                    series: "Scotchgard Paint Protection",
+                    badge: "PPF",
+                    badgeColor: "bg-purple-100 text-purple-700",
+                    description: "Self-healing clear film that shields your vehicle's paint from rock chips, scratches, and road debris. Includes a 7-year warranty.",
+                  },
+                ].map((film) => (
+                  <div
+                    key={film.series}
+                    className="rounded-xl border border-slate-100 bg-slate-50 p-5"
+                  >
+                    <div className="mb-3 flex items-center justify-between gap-2">
+                      <h4 className="font-bold text-slate-900">{film.series}</h4>
+                      <span className={`shrink-0 rounded-full px-2.5 py-0.5 text-xs font-semibold ${film.badgeColor}`}>
+                        {film.badge}
+                      </span>
+                    </div>
+                    <p className="text-sm text-slate-600">{film.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </motion.div>
