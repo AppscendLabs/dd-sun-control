@@ -67,14 +67,14 @@ export function Footer() {
                 aria-label="Roll'n Wrapz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 items-center justify-center rounded-full bg-slate-800 px-3 transition-colors hover:bg-yellow-500"
+                className="flex h-10 items-center justify-center opacity-80 transition-opacity hover:opacity-100"
               >
                 <Image
                   src="/images/rollnwrapz-logo.png"
                   alt="Roll'n Wrapz"
-                  width={60}
-                  height={24}
-                  className="h-5 w-auto object-contain brightness-0 invert"
+                  width={80}
+                  height={32}
+                  className="h-8 w-auto object-contain"
                 />
               </a>
             </div>
