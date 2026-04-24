@@ -133,19 +133,30 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-slate-800 pt-8 flex flex-col items-center gap-2 sm:flex-row sm:justify-between">
+        <div className="mt-8 border-t border-slate-800 pt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
           <p className="text-sm text-slate-400">
             &copy; {new Date().getFullYear()} {BUSINESS.name}. All rights
             reserved.
           </p>
-          <a
-            href="https://www.appscendlabs.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-slate-500 transition-colors hover:text-yellow-500"
-          >
-            Built by Appscend Labs
-          </a>
+          <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-4">
+            <a
+              href="https://rollnwrapz.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-slate-500 transition-colors hover:text-yellow-500"
+            >
+              Sister Company: Roll&apos;n Wrapz
+            </a>
+            <span className="hidden text-slate-700 sm:inline">·</span>
+            <a
+              href="https://www.appscendlabs.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-slate-500 transition-colors hover:text-yellow-500"
+            >
+              Built by Appscend Labs
+            </a>
+          </div>
         </div>
       </div>
     </footer>
