@@ -42,12 +42,6 @@ const TEAM_MEMBERS = [
     image: "/images/team/henry-woodward.jpg",
     bio: "Henry brings a sharp eye and steady hands to every installation. His dedication to precision means every film is applied perfectly — no bubbles, no edges, just clean results.",
   },
-  {
-    name: "Ethan Reed",
-    role: "Installer — NLR & NWA",
-    image: "/images/team/ethan-reed.jpg",
-    bio: "Ethan covers both North Little Rock and Northwest Arkansas, bringing D & D Sun Control's professional service to customers across the state.",
-  },
 ];
 
 export default function TeamPage() {
