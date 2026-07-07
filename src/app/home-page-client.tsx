@@ -144,12 +144,6 @@ const TEAM_MEMBERS = [
     image: "/images/team/henry-woodward.jpg",
     bio: "Precision installer with an eye for quality",
   },
-  {
-    name: "Ethan Reed",
-    role: "Installer — NLR & NWA",
-    image: "/images/team/ethan-reed.jpg",
-    bio: "Serving North Little Rock and Northwest Arkansas",
-  },
 ];
 
 const SERVICE_AREAS = [
