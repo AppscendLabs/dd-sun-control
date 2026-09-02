@@ -112,36 +112,42 @@ const TEAM_MEMBERS = [
     name: "Evans Dietz",
     role: "Owner",
     image: "/images/team/evans-dietz.jpg",
+    imagePosition: "object-center",
     bio: "30+ years experience leading D&D Sun Control",
   },
   {
     name: "Erin Shahan",
     role: "Bookkeeper & HR",
     image: "/images/team/erin-shahan.jpg",
+    imagePosition: "object-[center_20%]",
     bio: "Handles the numbers and takes care of our team",
   },
   {
     name: "Melvin Garrett",
     role: "Automotive & Paint Protection",
     image: "/images/team/melvin-garrett.jpg",
+    imagePosition: "object-center",
     bio: "Specialist in automotive tint and paint protection film",
   },
   {
     name: "Jennifer Jahns",
     role: "Office Manager",
     image: "/images/team/jennifer-jahns.jpg",
+    imagePosition: "object-[center_15%]",
     bio: "Keeps operations running smoothly for every client",
   },
   {
     name: "Brian Battie",
     role: "Commercial & Residential",
     image: "/images/team/brian-battie.jpg",
+    imagePosition: "object-[center_25%]",
     bio: "Expert installer for commercial and residential projects",
   },
   {
     name: "Henry Woodward",
     role: "Installer",
     image: "/images/team/henry-woodward.jpg",
+    imagePosition: "object-[center_10%]",
     bio: "Precision installer with an eye for quality",
   },
 ];
@@ -477,7 +483,7 @@ export function HomePageClient() {
                     alt={`${member.name} - ${member.role} at D&D Sun Control`}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className={`object-cover ${member.imagePosition} transition-transform duration-500 group-hover:scale-110`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                 </div>

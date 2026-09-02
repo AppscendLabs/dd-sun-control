@@ -10,36 +10,42 @@ const TEAM_MEMBERS = [
     name: "Evans Dietz",
     role: "Owner",
     image: "/images/team/evans-dietz.jpg",
+    imagePosition: "object-center",
     bio: "With over 30 years at the helm of D & D Sun Control, Evans has built the company into one of Central Arkansas's most trusted window tinting businesses. His hands-on experience and commitment to quality set the standard for every job.",
   },
   {
     name: "Erin Shahan",
     role: "Bookkeeper & HR",
     image: "/images/team/erin-shahan.jpg",
+    imagePosition: "object-[center_20%]",
     bio: "Erin keeps the business running behind the scenes — managing finances, HR, and the day-to-day operations that allow the rest of the team to focus on delivering great work.",
   },
   {
     name: "Melvin Garrett",
     role: "Automotive & Paint Protection",
     image: "/images/team/melvin-garrett.jpg",
+    imagePosition: "object-center",
     bio: "Melvin is our go-to specialist for automotive tinting and paint protection film. His precision and attention to detail ensure every vehicle leaves the shop looking flawless.",
   },
   {
     name: "Jennifer Jahns",
     role: "Office Manager",
     image: "/images/team/jennifer-jahns.jpg",
+    imagePosition: "object-[center_15%]",
     bio: "Jennifer is the first voice you'll hear when you call D & D Sun Control. She coordinates scheduling, customer inquiries, and makes sure every client experience is seamless from start to finish.",
   },
   {
     name: "Brian Battie",
     role: "Commercial & Residential",
     image: "/images/team/brian-battie.jpg",
+    imagePosition: "object-[center_25%]",
     bio: "Brian specializes in commercial and residential installations, tackling everything from large office buildings to private homes. His expertise ensures professional results on every scale.",
   },
   {
     name: "Henry Woodward",
     role: "Installer",
     image: "/images/team/henry-woodward.jpg",
+    imagePosition: "object-[center_10%]",
     bio: "Henry brings a sharp eye and steady hands to every installation. His dedication to precision means every film is applied perfectly — no bubbles, no edges, just clean results.",
   },
 ];
@@ -90,7 +96,7 @@ export default function TeamPage() {
                     alt={`${member.name} — ${member.role} at D & D Sun Control`}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className={`object-cover ${member.imagePosition} transition-transform duration-500 group-hover:scale-105`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent" />
                   <div className="absolute bottom-0 left-0 p-6">
