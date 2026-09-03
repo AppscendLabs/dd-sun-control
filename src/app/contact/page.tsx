@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { BUSINESS } from "@/lib/config";
 
 const CONTACT_INFO = [
@@ -68,14 +68,34 @@ export default function ContactPage() {
     message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: "", email: "", phone: "", service: "", message: "" });
-    }, 3000);
+    setIsSubmitting(true);
+    setSubmitError(false);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+
+      setIsSubmitted(true);
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+      }, 5000);
+    } catch (err) {
+      console.error("Failed to submit contact form:", err);
+      setSubmitError(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -292,11 +312,22 @@ export default function ContactPage() {
                     />
                   </div>
 
+                  {submitError && (
+                    <div className="flex items-center space-x-2 rounded-lg border-2 border-red-200 bg-red-50 p-4 text-red-700">
+                      <AlertCircle className="h-5 w-5 shrink-0" />
+                      <span className="text-sm">
+                        Something went wrong sending your message. Please try
+                        again or call us at {BUSINESS.phone}.
+                      </span>
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    className="flex w-full items-center justify-center space-x-2 rounded-lg bg-yellow-500 px-8 py-4 text-lg font-semibold text-slate-900 shadow-lg transition-all hover:scale-105 hover:bg-yellow-600"
+                    disabled={isSubmitting}
+                    className="flex w-full items-center justify-center space-x-2 rounded-lg bg-yellow-500 px-8 py-4 text-lg font-semibold text-slate-900 shadow-lg transition-all hover:scale-105 hover:bg-yellow-600 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:scale-100"
                   >
-                    <span>Send Message</span>
+                    <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
                     <Send className="h-5 w-5" />
                   </button>
                 </form>
