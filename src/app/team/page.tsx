@@ -14,13 +14,6 @@ const TEAM_MEMBERS = [
     bio: "With over 30 years at the helm of D & D Sun Control, Evans has built the company into one of Central Arkansas's most trusted window tinting businesses. His hands-on experience and commitment to quality set the standard for every job.",
   },
   {
-    name: "Erin Shahan",
-    role: "Bookkeeper & HR",
-    image: "/images/team/erin-shahan.jpg",
-    imagePosition: "object-[center_20%]",
-    bio: "Erin keeps the business running behind the scenes — managing finances, HR, and the day-to-day operations that allow the rest of the team to focus on delivering great work.",
-  },
-  {
     name: "Melvin Garrett",
     role: "Automotive & Paint Protection",
     image: "/images/team/melvin-garrett.jpg",
