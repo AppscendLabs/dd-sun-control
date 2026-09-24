@@ -116,13 +116,6 @@ const TEAM_MEMBERS = [
     bio: "30+ years experience leading D&D Sun Control",
   },
   {
-    name: "Erin Shahan",
-    role: "Bookkeeper & HR",
-    image: "/images/team/erin-shahan.jpg",
-    imagePosition: "object-[center_20%]",
-    bio: "Handles the numbers and takes care of our team",
-  },
-  {
     name: "Melvin Garrett",
     role: "Automotive & Paint Protection",
     image: "/images/team/melvin-garrett.jpg",
